@@ -6,10 +6,6 @@ edition = "2021"
 [dependencies]
 mongodb = "3.1.0"
 serde = "1.0.215"
-micorm-derive = { path = "micorm-derive", optional = true }
-rocket_db_pools = { version = "0.2.0", optional = true }
-
-[features]
-default = ["derive"]
-derive = ["dep:micorm-derive"]
-rocket = ["dep:rocket_db_pools"]
+async-trait = "0.1.83"
+uuid = { version = "1.11.0", features = ["v4", "serde", "fast-rng"] }
+micorm_derive = {path = "micorm_derive"}

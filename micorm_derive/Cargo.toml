@@ -1,11 +1,11 @@
 [package]
-name = "micorm-derive"
+name = "micorm_derive"
 version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+darling = "0.20.10"
 quote = "1.0.37"
-serde = { version = "1.0.215", features = ["derive"] }
 syn = "2.0.89"
 
 [lib]
