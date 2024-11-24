@@ -1,0 +1,15 @@
+[package]
+name = "micorm"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+mongodb = "3.1.0"
+serde = "1.0.215"
+micorm-derive = { path = "micorm-derive", optional = true }
+rocket_db_pools = { version = "0.2.0", optional = true }
+
+[features]
+default = ["derive"]
+derive = ["dep:micorm-derive"]
+rocket = ["dep:rocket_db_pools"]
